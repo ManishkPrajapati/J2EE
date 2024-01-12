@@ -58,6 +58,5 @@ public class Product {
 		return "Product [pid=" + pid + ", pname=" + pname + ", qty=" + qty + ", price=" + price + "]";
 	}
 	
-	xInt |= bitMask;
 
 }
