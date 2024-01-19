@@ -20,6 +20,34 @@ public class ProductDaoImpl implements Productdao{
 			return p;
 		});
 	}
+
+	@Override
+	public void addProd(Product p) {
+		String str="insert into products values(?,?,?,?)";
+		jt.update(str,new Object[] {p.getPid(),p.getName(),p.getPrice(),p.getImage()});
+		
+	}
+
+	@Override
+	public Product getbyid(int pid) {
+		Product p = jt.queryForObject("select * from products where pid=?",new Object[] {pid},
+				(rs,num)->{
+					Product r = new Product(rs.getInt(1),rs.getString(2),rs.getInt(3),rs.getString(4));
+					return r;
+				});
+		return p;		
+	}
+
+	@Override
+	public void modifybyId(Product p) {
+		jt.update("update products set name=?,price=?,image=? where pid=?", new Object[] {p.getName(),p.getPrice(),p.getImage(),p.getPid()});
+		
+	}
+
+	@Override
+	public void removeByID(int pid) {
+		jt.update("delete from products where pid=?", new Object[] {pid});
+	}
 	
 	
 }

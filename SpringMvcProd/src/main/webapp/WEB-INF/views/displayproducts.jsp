@@ -33,8 +33,8 @@
 										<img class="image" src="${p.image}" width="300" height="300"/>
 												<ul>	
 														<li>${p.pid}</li>
-														<li><a href="#"><i class="fas fa-edit"></i></a></li>
-														<li><a href="#"><i class="fas fa-trash"></i></a></li>
+														<li><a href="editprod/${p.pid}"><i class="fas fa-edit"></i></a></li>
+														<li><a href="deleteprod/${p.pid}"><i class="fas fa-trash"></i></a></li>
 												</ul>
 										</div>
 										<div class="part-2">

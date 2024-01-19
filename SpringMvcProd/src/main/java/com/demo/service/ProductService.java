@@ -8,4 +8,12 @@ public interface ProductService {
 
 	List<Product> getallProd();
 
+	void addnewProduct(Product p);
+
+	Product getById(int pid);
+
+	void updatebyID(Product product);
+
+	void deleteByID(int pid);
+
 }

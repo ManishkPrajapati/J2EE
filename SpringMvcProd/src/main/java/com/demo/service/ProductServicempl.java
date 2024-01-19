@@ -18,6 +18,27 @@ public class ProductServicempl implements ProductService{
 	public List<Product> getallProd() {
 		return pdao.getallproducts();
 	}
+
+	public void addnewProduct(Product p) {
+		pdao.addProd(p);
+		
+	}
+
+	@Override
+	public Product getById(int pid) {
+		return pdao.getbyid(pid);
+	}
+
+	@Override
+	public void updatebyID(Product product) {
+		pdao.modifybyId(product);
+	}
+
+	@Override
+	public void deleteByID(int pid) {
+		pdao.removeByID(pid);
+		
+	}
 	
 	
 }
