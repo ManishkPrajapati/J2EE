@@ -17,7 +17,7 @@
         <h2>Add Leave</h2>
         <form action="applyleave" method="post">
             <label for="title">Empno:</label>
-            <input type="text" id="title" name="title" required>
+            <input type="number" id="leaveid" name="leaveid" required>
             
             
             <label for="price">Start:</label>

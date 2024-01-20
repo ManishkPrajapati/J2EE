@@ -16,7 +16,7 @@
   <div class="container">
     <div class="left">
       <div ><h1>XYZ Company Leave Processing Application</h1></div>
-      <div class="eula">Employee Leave Management</div>
+      
     </div>
     <div class="right">
       <svg viewBox="0 0 320 300">

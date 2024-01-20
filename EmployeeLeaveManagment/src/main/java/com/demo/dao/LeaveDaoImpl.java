@@ -17,7 +17,7 @@ public class LeaveDaoImpl implements LeaveDao{
 
 	@Override
 	public List<Leave> getAllLeave() {
-		return jd.query("select * from leavedetails", (rs,num)->{
+		return jd.query("select * from  leavedetails", (rs,num)->{
 			Leave l=new Leave();
 			l.setLeaveid(rs.getString(1));
 			l.setLeaveApplied(rs.getString(2));
@@ -31,7 +31,7 @@ public class LeaveDaoImpl implements LeaveDao{
 
 	@Override
 	public void addLeave(Leave l) {
-		jd.update("insert into leavedetails(leave_applied_on,start_date,end_date,leave_type,leave_reason) values(?,?,?,?,?)",new Object[] {LocalDate.now(),l.getStart(),l.getEnd(),l.getLeaveType(),l.getLeaveReason()});
+		jd.update("insert into  leavedetails(leave_id,leave_applied_on,start_date,end_date,leave_type,leave_reason) values(?,?,?,?,?,?)",new Object[] {l.getLeaveid(),LocalDate.now(),l.getStart(),l.getEnd(),l.getLeaveType(),l.getLeaveReason()});
 		
 	}
 

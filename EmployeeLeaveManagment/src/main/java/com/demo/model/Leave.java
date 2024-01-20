@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Leave {
 	
-	private  String leaveid;
+	private String leaveid;
 	private String leaveApplied;
 	private String start;
 	private String end;
@@ -28,6 +28,14 @@ public class Leave {
 	
 	public Leave( String start, String end, String leaveType, String leaveReason) {
 		super();
+		this.start = start;
+		this.end = end;
+		this.leaveType = leaveType;
+		this.leaveReason = leaveReason;
+	}
+	public Leave(String leaveid, String start, String end, String leaveType, String leaveReason) {
+		super();
+		this.leaveid = leaveid;
 		this.start = start;
 		this.end = end;
 		this.leaveType = leaveType;

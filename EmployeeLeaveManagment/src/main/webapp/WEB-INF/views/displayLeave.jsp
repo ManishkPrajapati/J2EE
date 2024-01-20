@@ -37,8 +37,8 @@
 </style>
 </head>
 <body>
+<div class="eula" style="padding-right: 20px"><h1>Employee Leave Management</h1></div>
 <main>
-<div class="eula">Employee Leave Management</div>
   <table>
     <thead>
       <tr>

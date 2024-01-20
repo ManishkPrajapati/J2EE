@@ -45,9 +45,9 @@ public class LeaveController {
 	}
 	
 	@PostMapping("/applyleave")
-	public ModelAndView insertProduct( @RequestParam String start,@RequestParam String end,@RequestParam String leaveType,@RequestParam String LeaveReason) {
+	public ModelAndView insertProduct( @RequestParam String leaveid,@RequestParam String start,@RequestParam String end,@RequestParam String leaveType,@RequestParam String LeaveReason) {
 		
-		Leave l=new Leave(start, end, leaveType,LeaveReason);
+		Leave l=new Leave(leaveid,start, end, leaveType,LeaveReason);
 		pservice.addnewLeave(l);
 		return new ModelAndView("redirect:/displayLeave");
 	}
